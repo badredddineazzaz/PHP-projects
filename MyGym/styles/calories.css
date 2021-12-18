@@ -1,0 +1,19 @@
+.left-side {
+  width: 50%;
+  height: 100vh;
+  background: linear-gradient(to right, #060a16, #0d152d);
+  display: block;
+}
+
+.sidebar {
+  background-color: rgb(0, 0, 0);
+  width: 9000px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.sidebar li {
+  background-color: rgb(40, 79, 112);
+}

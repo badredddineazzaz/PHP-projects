@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*******************Left Side*****************/
+.left-side {
+  width: 50%;
+  height: 100vh;
+  background: linear-gradient(to right, #060a16, #0d152d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.left-side h1 {
+  color: #eaeaea;
+}
+.left-side img {
+  max-width: max-content;
+  width: 600px;
+  animation: up-down 2s infinite;
+}
+
+@keyframes up-down {
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/****************Right Side******************/
+.right-side {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  padding: 10%;
+}
+.reg {
+  padding: 5% 10%;
+}
+
+.errorMessage {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #b71c1c;
+}
+
+.right-side .title {
+  margin-bottom: 40px;
+}
+.right-side .title h1 {
+  color: #0d152d;
+}
+.right-side .title p {
+  color: #858585;
+}
+
+.right-side input:not(input[type="checkbox"]) {
+  background-color: #e3e3e3;
+  outline: none;
+  border: none;
+  padding: 15px;
+  font-size: 15px;
+  width: 100%;
+  border-radius: 4px;
+  margin: 5px 0 15px 0;
+}
+.right-side input[type="checkbox"] {
+  padding: 20px;
+  background-color: #858585;
+}
+.inputPass {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#togglePassword {
+  position: absolute;
+  right: 15px;
+  bottom: 45%;
+  cursor: pointer;
+}
+
+.setNext {
+  position: absolute;
+  right: 15px;
+  bottom: 45%;
+}
+
+.remFor {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.remFor a {
+  color: #0d152d;
+}
+
+form button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 18px;
+  background-color: #0d152d;
+  color: #eaeaea;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.signup {
+  display: flex;
+  margin-top: 18px;
+  font-size: 15px;
+}
+.signup p {
+  color: #858585;
+}
+.signup a {
+  color: #0d152d;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .container {
+    height: 100vh;
+  }
+  .right-side {
+    width: 100%;
+    height: 100vh;
+  }
+  .left-side {
+    width: 100%;
+    height: 150px;
+    border-radius: 0 0 100% 100%;
+    box-shadow: 3px 3px 31px #858585;
+  }
+  .left-side img {
+    display: none;
+  }
+}
+
+.check-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  width: 100%;
+}
+
+.check-container .option_item {
+  margin-bottom: 15px;
+  margin-top: 5px;
+  display: block;
+  position: relative;
+  width: 50%;
+  /* height: 175px; */
+}
+
+#rightCheckbox {
+  margin-left: 15px;
+}
+
+.check-container .option_item .checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+.option_item .option_inner {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #585c68;
+  display: block;
+  border: 2px solid #192958;
+  position: relative;
+}
+
+.option_item .option_inner .name {
+  user-select: none;
+}
+
+.option_item .checkbox:checked ~ .option_inner.facebook {
+  background-color: #192958;
+  color: #fff;
+}
