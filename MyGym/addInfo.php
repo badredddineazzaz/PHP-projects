@@ -17,8 +17,6 @@
          $nom = $_POST['nom'];
          $prenom = $_POST['prenom'];
 
-        //  `nom`='$nom', `prenom`= '$prenom'
-
          $query = "UPDATE `user` SET `nom`='$nom', `prenom`= '$prenom',  `sexe` = '$sexe', `age` = '$age', `poids` = '$poids', `taille` = '$taille' WHERE (`id_p` = '$id');";
         $result=mysqli_query($con,$query);
 

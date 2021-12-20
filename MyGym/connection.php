@@ -6,5 +6,5 @@ $dbpassword ="root";
 $dbname ="mygym";
 
 if(!$con= mysqli_connect($dbhost,$dbuser,$dbpassword,$dbname)){
-    die("can't connect");
+    header("Location: errors/error500.php");
 }

@@ -5,6 +5,7 @@
     include('connection.php');
     include('functions.php');
 
+
    if($_SERVER['REQUEST_METHOD']== "POST"){
        //something was posted
         $email = $_POST['email'];
@@ -42,11 +43,14 @@
                         array_push($errorMessages,$error);
                     }
 
+                }else{
+                    $error='Pardon on a pas trouvé cet email. ' .'<a style="; color:white;" href="register.php">Inscrivez-vous!</a>' ;
+                            array_push($errorMessages,$error);
                 }
             }
 
         }else{
-            echo("Tous les camps sont obligatoires! ");
+            echo("Tous les champs sont obligatoires! ");
         }
 
    }
@@ -82,11 +86,14 @@
                 <p>Entrez votre email et mot de passe pour s'authetifier.</p>
             </div>
 
+            <!-- //Error Messages -->
             <?php foreach($errorMessages as $key): ?>
             
-                <p class="errorMessage"><i class="fal fa-exclamation-triangle"></i> <?= $key; ?></p>
+            <p class="errorMessage"> <i class="fal fa-exclamation-triangle"></i> <?= $key; ?></p>
+                
            
-            <?php endforeach; ?>
+            
+        <?php endforeach; ?>
 
                 
             

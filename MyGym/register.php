@@ -4,6 +4,7 @@
     include('connection.php');
     include('functions.php');
 
+
    if($_SERVER['REQUEST_METHOD']== "POST"){
        //something was posted
         $username = $_POST['username'];
@@ -19,7 +20,7 @@
 
             if($password != $confirmPassword){
 
-                $error="Les mot de passe ne sont pas identiques!";
+                $error="Les mots de passe ne sont pas identiques!";
                 array_push($errorMessages,$error);
 
             }else if(mysqli_num_rows($selectEmail) || mysqli_num_rows($selectUsername)) {
@@ -35,7 +36,7 @@
             }
 
         }else{
-            echo("Tous les camps sont obligatoires! ");
+            echo("Tous les champs sont obligatoires! ");
         }
 
    }
@@ -48,7 +49,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>S'inscrire | MyGym</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -108,7 +109,7 @@
                 <button name="signup" type="submit">S'inscrire</button>
             </form>
             <div class="signup">
-                <p>Vous avez déja un compte? </p><a href="./index.php"> Se connecter maintenant.</a>
+                <p>Vous avez déja un compte? </p><a href="./login.php"> Se connecter maintenant.</a>
             </div>
 
 

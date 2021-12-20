@@ -1,6 +1,5 @@
 <?php
 
-$errorIcon = '<i class="fal fa-exclamation-triangle"></i>';
     function check_login($con){
 
         if(isset($_SESSION['id_p'])){
@@ -14,12 +13,12 @@ $errorIcon = '<i class="fal fa-exclamation-triangle"></i>';
                 $user_data = mysqli_fetch_assoc($result);
                 return $user_data;
             }
-        }
-
-        //back to login
+        }else{
+            //back to login
         header("Location: login.php");
-        die;
+        }   
     }
 
 
+    $succesMessages=array();
     $errorMessages=array();

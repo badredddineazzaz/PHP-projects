@@ -1,7 +1,8 @@
 <?php
+session_start();
 
-if(isset($_SESSION['id_p'])){
-    unset($_SESSION['id_p']);
-}
+unset($_SESSION["id_p"]);
+unset($_SESSION["nom"]);
+
 
 header("Location: login.php");

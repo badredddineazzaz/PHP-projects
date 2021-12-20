@@ -86,15 +86,7 @@
   background-color: #858585;
 }
 .inputPass {
-  display: flex;
-  align-items: center;
   position: relative;
-}
-#togglePassword {
-  position: absolute;
-  right: 15px;
-  bottom: 45%;
-  cursor: pointer;
 }
 
 .setNext {
@@ -107,6 +99,12 @@
   display: flex;
   justify-content: space-between;
   font-size: 14px;
+}
+#togglePassword {
+  position: absolute;
+  cursor: pointer;
+  bottom: 45%;
+  right: 15px;
 }
 .remFor a {
   color: #0d152d;
