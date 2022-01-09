@@ -9,4 +9,4 @@ Les propriétaires du repository :
   
  Est Sidi Bennoure.
  
- Live Preview : https://php-project-est.000webhostapp.com/login.php
+ Live Preview : https://php-project-est.000webhostapp.com/
